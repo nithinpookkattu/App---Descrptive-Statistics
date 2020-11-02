@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<title>Descriptive Statistics</title>
+
+	</head>
+
+	<body>
+
+		<div class='container' style='padding-top:50px'>
+			<h1>Descriptive Statistics</h1>
+			<hr>
+			<form method='post' action='/'>
+				<div class='form-group row'>
+					<div class='col-sm-6'>
+						<label><em>Enter the list of numbers with space</em></label>
+					</div>
+
+					<div class='col-sm-6'>
+						<input type='str' class='form-control' name='user_input' placeholder='Enter the list'>
+					</div>
+				</div>
+				<br><div class='form-group row'>
+					<div style='text-align:center' class='col-sm-12'>
+						<button type='submit' class='btn btn-primary'>Calculate</button>
+					</div>
+				</div>
+				<div>
+					<p style='font-size: 20px; text-align: center'><br>The descriptive statistics of {{user_list}} is given in the table below</p>
+					<br><br><table class="table table-striped">
+					<thead class='thead-dark' style='font-size: 25px'>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Description</th>
+							<th scope="col">Value</th>
+						</tr>
+					</thead>
+					<tbody style='font-size: 20px'>
+						<tr>
+							<th scope="row">1</th>
+							<td><em>Mean</em></td>
+							<td>{{mean}}</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td><em>Standard Deviation</em></td>
+							<td>{{stdev}}</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td><em>Variance</em></td>
+							<td>{{var}}</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td><em>Skewness</em></td>
+							<td>{{skewness}}</td>
+						</tr>
+						<tr>
+							<th scope="row">5</th>
+							<td><em>Kurtosis</em></td>
+							<td>{{kurt}}</td>
+						</tr>
+						<tr>
+							<th scope="row">6</th>
+							<td><em>Minimum</em></td>
+							<td>{{minimum}}</td>
+						</tr>
+						<tr>
+							<th scope="row">7</th>
+							<td><em>First Quartile</em></td>
+							<td>{{first}}</td>
+						</tr>
+						<tr>
+							<th scope="row">8</th>
+							<td><em>Median</em></td>
+							<td>{{med}}</td>
+						</tr>
+						<tr>
+							<th scope="row">9</th>
+							<td><em>Third Quartile</em></td>
+							<td>{{third}}</td>
+						</tr>
+						<tr>
+							<th scope="row">10</th>
+							<td><em>Maximum</em></td>
+							<td>{{maximum}}</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</form>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
